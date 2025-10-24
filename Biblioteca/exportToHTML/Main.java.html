@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Main.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #0033b3;}
+.s1 { color: #080808;}
+.s2 { color: #067d17;}
+.s3 { color: #1750eb;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.util.ArrayList;</span>
+<span class="s0">import </span><span class="s1">java.util.List;</span>
+
+<span class="s0">public class </span><span class="s1">Main {</span>
+    <span class="s0">public static void </span><span class="s1">main(String[] args) {</span>
+
+        <span class="s1">Endereco end1 = </span><span class="s0">new </span><span class="s1">Endereco(</span><span class="s2">&quot;Rua das Flores&quot;</span><span class="s1">, </span><span class="s3">123</span><span class="s1">, </span><span class="s2">&quot;Centro&quot;</span><span class="s1">, </span><span class="s2">&quot;São Paulo&quot;</span><span class="s1">, </span><span class="s2">&quot;SP&quot;</span><span class="s1">, </span><span class="s2">&quot;01000-000&quot;</span><span class="s1">);</span>
+        <span class="s1">Endereco end2 = </span><span class="s0">new </span><span class="s1">Endereco(</span><span class="s2">&quot;Av. Brasil&quot;</span><span class="s1">, </span><span class="s3">456</span><span class="s1">, </span><span class="s2">&quot;Jardins&quot;</span><span class="s1">, </span><span class="s2">&quot;Rio de Janeiro&quot;</span><span class="s1">, </span><span class="s2">&quot;RJ&quot;</span><span class="s1">, </span><span class="s2">&quot;20000-000&quot;</span><span class="s1">);</span>
+
+
+        <span class="s1">Aluno aluno = </span><span class="s0">new </span><span class="s1">Aluno(</span><span class="s2">&quot;Pedro Rik&quot;</span><span class="s1">, </span><span class="s2">&quot;123.456.789-00&quot;</span><span class="s1">, end1, </span><span class="s2">&quot;99999-9999&quot;</span><span class="s1">, </span><span class="s2">&quot;pedro@musica.com&quot;</span><span class="s1">, </span><span class="s2">&quot;Engenharia de Som&quot;</span><span class="s1">);</span>
+        <span class="s1">Professor professor = </span><span class="s0">new </span><span class="s1">Professor(</span><span class="s2">&quot;Carlos Silva&quot;</span><span class="s1">, </span><span class="s2">&quot;987.654.321-00&quot;</span><span class="s1">, end2, </span><span class="s2">&quot;98888-8888&quot;</span><span class="s1">, </span><span class="s2">&quot;carlos@ifsp.edu.br&quot;</span><span class="s1">, </span><span class="s2">&quot;Física&quot;</span><span class="s1">, </span><span class="s2">&quot;Doutorado&quot;</span><span class="s1">, </span><span class="s2">&quot;Mecânica Quântica&quot;</span><span class="s1">);</span>
+        <span class="s1">Funcionario funcionario = </span><span class="s0">new </span><span class="s1">Funcionario(</span><span class="s2">&quot;João Almeida&quot;</span><span class="s1">, </span><span class="s2">&quot;555.666.777-00&quot;</span><span class="s1">, end1, </span><span class="s2">&quot;97777-7777&quot;</span><span class="s1">, </span><span class="s2">&quot;joao@biblioteca.com&quot;</span><span class="s1">, </span><span class="s2">&quot;Administração&quot;</span><span class="s1">);</span>
+
+        <span class="s1">aluno.exibirDados();</span>
+        <span class="s1">professor.exibirDados();</span>
+        <span class="s1">funcionario.exibirDados();</span>
+
+        <span class="s1">Autor autor1 = </span><span class="s0">new </span><span class="s1">Autor(</span><span class="s2">&quot;Isaac Newton&quot;</span><span class="s1">, </span><span class="s2">&quot;Inglês&quot;</span><span class="s1">);</span>
+        <span class="s1">Autor autor2 = </span><span class="s0">new </span><span class="s1">Autor(</span><span class="s2">&quot;Albert Einstein&quot;</span><span class="s1">, </span><span class="s2">&quot;Alemão&quot;</span><span class="s1">);</span>
+        <span class="s1">Editora editora = </span><span class="s0">new </span><span class="s1">Editora(</span><span class="s2">&quot;Editora Ciência Viva&quot;</span><span class="s1">, </span><span class="s2">&quot;São Paulo&quot;</span><span class="s1">);</span>
+
+        <span class="s1">List&lt;Autor&gt; autoresLivro = </span><span class="s0">new </span><span class="s1">ArrayList&lt;&gt;();</span>
+        <span class="s1">autoresLivro.add(autor1);</span>
+        <span class="s1">autoresLivro.add(autor2);</span>
+
+        <span class="s1">Livro livro = </span><span class="s0">new </span><span class="s1">Livro(</span><span class="s2">&quot;Princípios da Física&quot;</span><span class="s1">, </span><span class="s2">&quot;Português&quot;</span><span class="s1">, </span><span class="s3">2020</span><span class="s1">, autoresLivro, editora, </span><span class="s2">&quot;Física Teórica&quot;</span><span class="s1">);</span>
+        <span class="s1">Periodico periodico = </span><span class="s0">new </span><span class="s1">Periodico(</span><span class="s2">&quot;Revista Científica Atual&quot;</span><span class="s1">, </span><span class="s2">&quot;Português&quot;</span><span class="s1">, </span><span class="s3">2024</span><span class="s1">, List.of(autor2), editora, </span><span class="s2">&quot;Científico&quot;</span><span class="s1">);</span>
+
+        <span class="s1">livro.exibirInformacoes();</span>
+        <span class="s1">periodico.exibirInformacoes();</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
