@@ -1,14 +1,14 @@
 public class Editora {
     private String nome;
-    private String cidade;
+    private Endereco endereco;
 
-    public Editora(String nome, String cidade) {
+    public Editora(String nome, Endereco endereco) {
         this.nome = nome;
-        this.cidade = cidade;
+        this.endereco = endereco;
     }
 
     @Override
     public String toString() {
-        return nome + " - " + cidade;
+        return nome + " - " + endereco.getCidade();
     }
 }

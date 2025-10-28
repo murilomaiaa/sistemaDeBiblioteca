@@ -10,13 +10,8 @@ public class Periodico extends Obra {
 
     @Override
     public void exibirInformacoes() {
-        System.out.println("📰 Periódico:");
-        System.out.println("Título: " + titulo);
-        System.out.println("Idioma: " + idioma);
-        System.out.println("Ano: " + anoEdicao);
+        super.exibirInformacoes();
         System.out.println("Tipo: " + tipo);
-        System.out.println("Autores: " + autores);
-        System.out.println("Editora: " + editora);
         System.out.println("-------------------------");
     }
 }
